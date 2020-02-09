@@ -254,10 +254,10 @@ def tagParagraph(text):
 
 	return tags,taggedTokens
 
-path = os.path.join(os.getcwd(),"taggedTexts_verifiedOnly")
+path = os.path.join(os.getcwd(),sys.argv[2])
 data = readTexts(path)
 
-outfile = sys.argv[1]
+outfile = sys.argv[2]
 f = open(outfile,"w",encoding="utf8")
 for entry in data:
 	json.dump(entry,f,ensure_ascii=False)
