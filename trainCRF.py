@@ -355,7 +355,7 @@ elif crossValPredict:
 		for i,testIndex in zip(range(len(testIndices)),testIndices):
 			singleResult = {}
 			trueVals = Y[testIndex]
-			predictedVals = results[i]
+			predictedVals = list(results[i])
 			singleResult["true"] = trueVals
 			singleResult["predicted"] = predictedVals
 			singleResult["tokens"] = data[testIndex]["tokens"]

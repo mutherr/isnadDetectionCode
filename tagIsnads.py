@@ -287,7 +287,7 @@ def tagBook(f,model,featurizer):
 			tagsFromDoc,tokens,taggedTokenStarts,taggedTokenEnds = getTagsFromText(data[i]["text"])
 			data[i]["tags"] = tagsFromDoc
 		else:
-			data[i]["tags"] = tags[i]
+			data[i]["tags"] = list(tags[i])
 			tokens = data[i]["tokens"]
 			#make sure we didn't accidentally try to tag an already tagged text
 			assert("@Isnad_Beg@" not in tokens and "@Isnad_End@" not in tokens and "Verified_Isnad_Beg@" not in tokens and "@Verified_Isnad_End@" not in tokens and "@ISB@" not in tokens and "@ISE@" not in tokens)
