@@ -206,7 +206,7 @@ for infile,outfile in zip(filesToTag,outFiles):
 	#read in the book we're adding markers to
 	book = open(infile,"r",encoding="utf8").read()
 
-	bookID = f.split(".")
+	bookID = os.path.basename(infile).split(".")
 	if "-ara1" not in bookID[-1] and "-per1" not in bookID[-1]:
 		bookID = bookID[:-1]
 	bookID = ".".join(bookID)
