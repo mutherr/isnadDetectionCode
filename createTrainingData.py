@@ -254,7 +254,7 @@ def tagParagraph(text):
 
 	return tags,taggedTokens
 
-path = os.path.join(os.getcwd(),sys.argv[2])
+path = os.path.join(os.getcwd(),sys.argv[1])
 data = readTexts(path)
 
 outfile = sys.argv[2]
