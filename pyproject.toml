@@ -1,0 +1,14 @@
+[project]
+name = "isnad-detection"
+version = "0.1.0"
+description = "CRF-based detection of isnads in Arabic texts"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scikit-learn>=1.5",
+    "sklearn-crfsuite>=0.5.0",
+    "tqdm>=4.66",
+]
+
+[tool.uv]
+package = false
